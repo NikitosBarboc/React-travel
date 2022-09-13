@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import list from './08_list-and-keys/list';
+import NumberList from './08_list-and-keys/NumberList';
+import Blog from './08_list-and-keys/Blog';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
+const posts = [
+  { id: 1, title: 'Hello World', content: 'Welcome to learning React!' },
+  { id: 2, title: 'Installation', content: 'You can install React from npm.' },
+];
 root.render(
   <React.StrictMode>
-    {list}
+    <NumberList numbers={[1, 2, 3, 4, 5, 6, 7, 8]} />
+    <Blog posts={posts} />
   </React.StrictMode>,
 );
 
