@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Greeting from './07_conditional-rendering/Greeting';
+import LoginControl from './07_conditional-rendering/LoginControl';
+import MailBox from './07_conditional-rendering/Mail';
+import Page from './07_conditional-rendering/WarningBanner';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Greeting isLoggedIn={false} />
+    <LoginControl isLoggedIn={false} />
+    <MailBox unreadMessages={1} />
+    <Page />
   </React.StrictMode>,
 );
 
