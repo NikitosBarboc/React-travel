@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './05_state-and-lifecycle/tick';
+import Clock from './05_state-and-lifecycle/tick';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <React.StrictMode />,
+  <React.StrictMode>
+    <Clock />
+    <Clock />
+    <Clock />
+    <Clock />
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
