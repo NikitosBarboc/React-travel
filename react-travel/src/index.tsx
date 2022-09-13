@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Button from './06_handeling-events/Button';
-import Form from './06_handeling-events/form';
-import Toggle from './06_handeling-events/Toggle';
+import Greeting from './07_conditional-rendering/Greeting';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Button text="click me" className="button" event={() => { console.log('click'); }} />
-    <Form message="submit" />
-    <Toggle />
+    <Greeting isLoggedIn={false} />
   </React.StrictMode>,
 );
 
