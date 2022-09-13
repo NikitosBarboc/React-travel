@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Clock from './05_state-and-lifecycle/tick';
+import Button from './06_handeling-events/events';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Clock />
-    <Clock />
-    <Clock />
-    <Clock />
+    <Button text="click me" className="button" event={(e) => { console.log(e); }} />;
   </React.StrictMode>,
 );
 
