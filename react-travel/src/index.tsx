@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NumberList from './08_list-and-keys/NumberList';
-import Blog from './08_list-and-keys/Blog';
+import NameForm from './09_forms/form';
+import EssayForm from './09_forms/EssayForm';
+import FlavorForm from './09_forms/FlavorForm';
+// import Reservation from './09_forms/Reservation';
+import MyForm from './09_forms/MyForm';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
-const posts = [
-  { id: 1, title: 'Hello World', content: 'Welcome to learning React!' },
-  { id: 2, title: 'Installation', content: 'You can install React from npm.' },
-];
 root.render(
   <React.StrictMode>
-    <NumberList numbers={[1, 2, 3, 4, 5, 6, 7, 8]} />
-    <Blog posts={posts} />
+    <NameForm />
+    <EssayForm />
+    <FlavorForm />
+    {/* <Reservation /> */}
+    <MyForm />
   </React.StrictMode>,
 );
 
