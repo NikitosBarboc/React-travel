@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import NameForm from './09_forms/form';
-import EssayForm from './09_forms/EssayForm';
-import FlavorForm from './09_forms/FlavorForm';
-// import Reservation from './09_forms/Reservation';
-import MyForm from './09_forms/MyForm';
+import Calculator from './10_Lifting-state-up/Calculatoe';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <NameForm />
-    <EssayForm />
-    <FlavorForm />
-    {/* <Reservation /> */}
-    <MyForm />
+    <Calculator />
   </React.StrictMode>,
 );
 
