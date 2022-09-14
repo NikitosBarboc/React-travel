@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Calculator from './10_Lifting-state-up/Calculatoe';
+import SignUpDialog from './11_composition-vs-inheritance/SignUpDialog';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <SignUpDialog />
   </React.StrictMode>,
 );
 
