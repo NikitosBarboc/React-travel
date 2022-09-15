@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MainPageHeader from './MainPageHeader';
+import App from './App';
+import './reset.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <MainPageHeader />
+    <App />
   </React.StrictMode>,
 );
 

@@ -1,0 +1,142 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 163px 12% 50px 14.3%;
+  background-color: #E5E5E5;
+}
+.card {
+  max-width: 390px;
+}
+.main__header {
+  display: flex;
+  gap: 136px;
+}
+.main__main {
+  margin: 70px 0 0 0;
+  gap: 95px;
+  display: flex;
+}
+.card-img {
+  height: 492px;
+  width: 390px;
+  margin: 40px 0 0 0;
+}
+.card-img > img {
+  max-width: 390px;
+}
+.card-img.Personalize {
+  background: url('../assets/Rectangle\ 32.png') 100% 100% no-repeat;
+}
+.card-img.Write {
+  background: url('../assets/Rectangle\ 31.png') 100% 100% no-repeat;
+}
+.card-img.Alivio {
+  background: url('../assets/Rectangle\ 30.png') 100% 100% no-repeat;
+}
+.paragraph {
+  color: #424242;
+}
+.main__title {
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 157%;
+min-width: 584px;
+/* or 79px */
+
+
+color: #01996D;
+}
+.main__paragraph {
+  margin: 44px 0 0 0;
+}
+.card-title {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  /* line-height: 150%; */
+  /* identical to box height, or 45px */
+  /* text-align: center; */
+  color: #000000;
+  position: relative;
+  padding: 40px 0 0 77px;
+  height: 100px;
+}
+.card-title > span {
+  top: -90px;
+  left: 0;
+  position: absolute;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(1, 153, 109, 0.2);
+}
+.card.Write {
+  margin: 200px 0 0 0;
+}
+@media(max-width: 1610px) {
+  .main__main {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main__header {
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    gap: 0;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    gap: 30px;
+    /* flex-direction: row; */
+  }
+  .card.Write {
+    margin: 0;
+  }
+  .card-img {
+    min-width: 390px;
+  }
+  .card-title {
+    margin: 0 0 30px 0 ;
+  }
+}
+@media(max-width: 850px) {
+  .main {
+    padding: 50px 0 30px 0;
+  }
+  .main__main {
+    align-items: center;
+  }
+  .card {
+    max-width: 390px;
+    flex-direction: column;
+  }
+  .main__header {
+    align-items: center;
+  }
+  .main__title {
+    font-size: 20px;
+    text-align: center;
+    max-width: 270px;
+    min-width: 270px;
+  }
+}
+@media(max-width: 450px) {
+  .main {
+    padding: 0 10px;
+  }
+  .card { 
+    max-width: 270px;
+  }
+  .card-img {
+    max-width: 270px;
+    min-width: 270px;
+  }
+}

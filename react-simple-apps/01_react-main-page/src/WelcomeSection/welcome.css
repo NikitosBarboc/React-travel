@@ -1,0 +1,44 @@
+.welcome {
+  min-width: 100%;
+  background: url('../assets/BG.png') 100% 100% no-repeat fixed;
+}
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  margin: 0px 0 30px 14vw;
+  padding: 170px 0 330px 0;
+}
+.title {
+  color: #01996D;
+}
+.welcome-title {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 74px;
+}
+.welcome-text {
+  margin: 30px 0 0 0;
+  max-width: 420px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  color: #484848;
+}
+.welcome-button {
+  margin: 18px 0 0 0;
+  max-width: 227px;
+}
+@media(max-width: 610px) {
+  .welcome-title {
+    font-size: 35px;
+    line-height: 34px;
+  }
+  .welcome-wrapper {
+    max-width: 280px;
+  }
+} 

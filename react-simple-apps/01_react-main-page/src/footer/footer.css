@@ -1,0 +1,29 @@
+.footer {
+  background: #245852;
+  padding: 95px 60% 144px 14%;
+}
+.footer__list {
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.footer__title {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 60px;
+  color: #FFFFFF;
+}
+@media(max-width: 470px) {
+  .footer {
+    padding: 95px 40% 144px 7%;
+  }
+}

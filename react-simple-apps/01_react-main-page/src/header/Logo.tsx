@@ -14,7 +14,7 @@ function Logo(props: logoProps) {
 
   return (
     <div className="logo">
-      <h1 className="logo_title">
+      <h1 className="logo__title title">
         {title}
       </h1>
       <div>

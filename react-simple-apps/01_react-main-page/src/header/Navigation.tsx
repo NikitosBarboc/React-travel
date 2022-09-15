@@ -7,9 +7,12 @@ type navigationProps = {
 function Navigation(props: navigationProps) {
   const { children } = props;
   return (
-    <ul className="navigation">
-      {children}
-    </ul>
+    <>
+      <div className="burger" />
+      <ul className="navigation">
+        {children}
+      </ul>
+    </>
   );
 }
 

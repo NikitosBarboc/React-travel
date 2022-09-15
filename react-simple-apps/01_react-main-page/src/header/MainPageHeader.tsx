@@ -3,6 +3,7 @@ import Header from './Header';
 import Logo from './Logo';
 import Navigation from './Navigation';
 import SignIn from './SignIn';
+import './header.css';
 
 function MainPageHeader() {
   return (
