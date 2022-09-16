@@ -7,7 +7,13 @@ function WelcomeMainPage() {
   return (
     <WelcomeSection
       titleText="Be aware, Manage well."
-      button={<Button cls="welcome-button green-button" text="Find Your Way" />}
+      button={(
+        <Button
+          cls="welcome-button green-button"
+          text="Find Your Way"
+          modalWindowInfo={{ text: 'info info info info info info info info info info info info info info info', title: 'More info' }}
+        />
+)}
     >
       <Paragraph
         cls="welcome-text"

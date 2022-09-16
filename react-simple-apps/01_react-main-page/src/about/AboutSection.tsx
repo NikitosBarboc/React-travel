@@ -19,6 +19,7 @@ function About() {
         <Button
           cls="green-button about-button"
           text="Let’s get started"
+          modalWindowInfo={{ title: 'Good luck!', text: 'some info about something' }}
         />
       </div>
       <div className="about-video" />

@@ -22,6 +22,7 @@ function ProductSection() {
         <Button
           cls="green-button products-button"
           text="Find Your Way"
+          modalWindowInfo={{ title: 'Your way', text: 'lorem lor lorem lorem lor lorem lorem lor lorem lorem lor lorem lorem lor lorem' }}
         />
       </div>
       <div className="product-img" />
