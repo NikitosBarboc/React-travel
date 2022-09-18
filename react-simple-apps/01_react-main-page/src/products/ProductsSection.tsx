@@ -6,7 +6,7 @@ import './products.css';
 
 function ProductSection() {
   return (
-    <section className="products">
+    <section className="products" role="contentinfo">
       <div className="products-content content">
         <h2 className="product-subtitle">Our product</h2>
         <Title

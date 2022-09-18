@@ -12,7 +12,7 @@ function Card(props: cardProps) {
     number, title, text,
   } = props;
   return (
-    <div className={`card ${title}`} key={title}>
+    <section className={`card ${title}`} key={title}>
       <div className="card__main-content">
         <div className="card-title">
           {title}
@@ -28,7 +28,7 @@ function Card(props: cardProps) {
         </div>
       </div>
       <div className={`card-img ${title}`} />
-    </div>
+    </section>
   );
 }
 

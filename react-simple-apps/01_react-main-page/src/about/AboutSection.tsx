@@ -7,7 +7,7 @@ import './about.css';
 function About() {
   return (
     <section className="about">
-      <div className="about-content content">
+      <div className="about-content content" role="contentinfo">
         <Title
           cls="about-title"
           text="Let's hear about Kayla's success story"
@@ -22,7 +22,7 @@ function About() {
           modalWindowInfo={{ title: 'Good luck!', text: 'some info about something' }}
         />
       </div>
-      <div className="about-video" />
+      <div className="about-video" role="contentinfo" />
     </section>
   );
 }

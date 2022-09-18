@@ -11,7 +11,7 @@ type welcomeSectionProps = {
 function WelcomeSection(props: welcomeSectionProps) {
   const { titleText, children, button } = props;
   return (
-    <section className="welcome">
+    <section className="welcome" role="contentinfo">
       <div className="welcome-wrapper">
         <Title cls="welcome-title" text={titleText} />
         {children}

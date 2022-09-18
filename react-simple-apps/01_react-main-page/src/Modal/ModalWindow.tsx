@@ -9,14 +9,24 @@ type modalWindowProps = {
 }
 
 class ModalWindow extends React.Component<modalWindowProps> {
+  ref: React.RefObject<HTMLButtonElement> = React.createRef();
+
   constructor(props: modalWindowProps) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    const ref = React.createRef();
+  }
+
+  componentDidMount(): void {
+    this.ref.current?.focus();
+  }
+
+  componentWillUnmount(): void {
+    this.ref = React.createRef();
   }
 
   handleClick(e: MouseEvent) {
     const { handleClick } = this.props;
-    console.log(e.target);
     const target = e.target as HTMLDivElement;
     const isModalWindow = target.classList.contains('modalWindow');
     const isCloseButton = target.classList.contains('modalWindow__close');
@@ -37,7 +47,7 @@ class ModalWindow extends React.Component<modalWindowProps> {
           className="modalWindow"
         >
           <div className="modalWindow-wrapper">
-            <div className="modalWindow__close" />
+            <button type="button" className="modalWindow__close" ref={this.ref}> </button>
             <div className="modalWindow__title">
               {title}
             </div>
@@ -47,7 +57,6 @@ class ModalWindow extends React.Component<modalWindowProps> {
           </div>
         </section>
         <div className="shadow" />
-
       </>
     );
   }

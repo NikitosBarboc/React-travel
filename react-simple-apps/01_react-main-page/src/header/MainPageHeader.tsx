@@ -11,10 +11,10 @@ function MainPageHeader() {
       logo={<Logo title="Alivio" />}
       nav={(
         <Navigation>
-          <li>Why Alivio</li>
-          <li>Solutions</li>
-          <li>Community</li>
-          <li>Pricing</li>
+          <a href="#Alivio">Why Alivio</a>
+          <a href="#Solutions">Solutions</a>
+          <a href="#Community">Community</a>
+          <a href="#Pricing">Pricing</a>
         </Navigation>
         )}
       signIn={<SignIn />}
