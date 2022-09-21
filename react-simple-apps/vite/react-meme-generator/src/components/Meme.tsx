@@ -14,6 +14,8 @@ export default function Meme() {
     const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
+        bottomTextColor: "#ffffff",
+        topTextColor: "#ffffff",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
     const [allMemes, setAllMemes] = useState([] as IMeme[])
@@ -53,26 +55,54 @@ export default function Meme() {
       }
       moveAt(e.pageX, e.pageY, e.currentTarget)
     }
-
+    const buttonTextStyles = {
+      color: meme.bottomTextColor
+    }
+    const topTextStyles = {
+      color: meme.topTextColor
+    }
     return (
         <main>
             <div className="form">
-                <input 
-                    type="text"
-                    placeholder="Top text"
-                    className="form--input"
-                    name="topText"
-                    value={meme.topText}
-                    onChange={handleChange}
-                />
-                <input 
-                    type="text"
-                    placeholder="Bottom text"
-                    className="form--input"
-                    name="bottomText"
-                    value={meme.bottomText}
-                    onChange={handleChange}
-                />
+                <div className="form__inputs">
+                  <input 
+                      type="text"
+                      placeholder="Top text"
+                      className="form--input text-input"
+                      name="topText"
+                      value={meme.topText}
+                      onChange={handleChange}
+                  />
+                  <input 
+                      type="text"
+                      placeholder="Bottom text"
+                      className="form--input text-input"
+                      name="bottomText"
+                      value={meme.bottomText}
+                      onChange={handleChange}
+                  />
+                   <label htmlFor="">
+                    top color: {' '}
+                    <input 
+                        type="color"
+                        className="form--input"
+                        name="topTextColor"
+                        value={meme.topTextColor}
+                        // value="#ff0000"
+                        onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    bottom color: {' '}
+                    <input 
+                        type="color"
+                        className="form--input"
+                        name="bottomTextColor"
+                        value={meme.bottomTextColor}
+                        onChange={handleChange}
+                    />
+                  </label>
+                </div>
                 <button 
                     className="form--button"
                     onClick={getMemeImage}
@@ -82,8 +112,16 @@ export default function Meme() {
             </div>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" />
-                <p className="meme--text top" draggable="true" onDragEnd={handleDrag} >{meme.topText}</p>
-                <p className="meme--text bottom" draggable="true" onDragEnd={handleDrag} >{meme.bottomText}</p>
+                <p className="meme--text top"
+                  style={topTextStyles}
+                  draggable="true"
+                  onDragEnd={handleDrag}
+                >{meme.topText}</p>
+                <p className="meme--text bottom"
+                  style={buttonTextStyles}
+                  draggable="true"
+                  onDragEnd={handleDrag}
+                  >{meme.bottomText}</p>
             </div>
         </main>
     )
