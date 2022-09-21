@@ -16,6 +16,8 @@ export default function Meme() {
         bottomText: "",
         bottomTextColor: "#ffffff",
         topTextColor: "#ffffff",
+        topTextFontSize: 30,
+        bottomTextFontSize: 30,
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
     const [allMemes, setAllMemes] = useState([] as IMeme[])
@@ -56,10 +58,12 @@ export default function Meme() {
       moveAt(e.pageX, e.pageY, e.currentTarget)
     }
     const buttonTextStyles = {
-      color: meme.bottomTextColor
+      color: meme.bottomTextColor,
+      fontSize: `${meme.bottomTextFontSize}px`
     }
     const topTextStyles = {
-      color: meme.topTextColor
+      color: meme.topTextColor,
+      fontSize: `${meme.topTextFontSize}px` 
     }
     return (
         <main>
@@ -88,7 +92,6 @@ export default function Meme() {
                         className="form--input"
                         name="topTextColor"
                         value={meme.topTextColor}
-                        // value="#ff0000"
                         onChange={handleChange}
                     />
                   </label>
@@ -99,6 +102,26 @@ export default function Meme() {
                         className="form--input"
                         name="bottomTextColor"
                         value={meme.bottomTextColor}
+                        onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    bottom text font size: {' '}
+                    <input 
+                        type="number"
+                        className="form--input input-number"
+                        name="topTextFontSize"
+                        value={meme.topTextFontSize}
+                        onChange={handleChange}
+                    />
+                  </label>
+                  <label>
+                    bottom text font size: {' '}
+                    <input 
+                        type="number"
+                        className="form--input input-number"
+                        name="bottomTextFontSize"
+                        value={meme.bottomTextFontSize}
                         onChange={handleChange}
                     />
                   </label>
