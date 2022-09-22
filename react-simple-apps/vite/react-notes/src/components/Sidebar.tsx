@@ -22,7 +22,7 @@ export default function Sidebar(props: ISidebarProps) {
             </div>
         </div>
     ))
-
+    
     return (
         <section className="pane sidebar">
             <div className="sidebar--header">

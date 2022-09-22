@@ -8,10 +8,6 @@ interface IEditorProps {
     updateNote: (id: string) => void
 }
 
-// notes={notes}
-//                     currentNote={findCurrentNote()}
-//                     setCurrentNoteId={setCurrentNoteId}
-//                     newNote={createNewNote}
 
 export default function Editor({ currentNote, updateNote }: IEditorProps) {
     const [selectedTab, setSelectedTab] = React.useState("write")

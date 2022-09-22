@@ -161,6 +161,9 @@ button:focus {
 }
 .mde-tabs {
   display: flex;
+  align-items: center;
+  justify-content: start;
+  max-width: 100%;
   gap: 20px;
 }
 .invisible {
@@ -170,4 +173,7 @@ button:focus {
   max-height: 100vh;
   min-height: 100vh !important;
   
+}
+.mde-header-group.hidden {
+  display: none !important;
 }
