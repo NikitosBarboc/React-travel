@@ -55,6 +55,15 @@ main {
   height: 40px;
   width: 50px;
 }
+.form__inputs {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+}
+.form__inputs__container {
+  display: flex;
+  gap: 10%;
+}
 .form--input {
   font-family: "Karla", sans-serif;
   border-radius: 5px;
