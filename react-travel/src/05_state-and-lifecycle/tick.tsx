@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom/client';
 
 type clockProps = {
   date: Date
@@ -45,5 +44,3 @@ class Clock extends React.Component<{}, clockProps> {
   }
 }
 export default Clock;
-// const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement);
-// root.render(<Clock />);

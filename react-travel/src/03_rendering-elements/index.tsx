@@ -5,14 +5,7 @@ import './index.css';
 const root = ReactDOM.createRoot(
   document.querySelector('#root') as HTMLDivElement,
 );
-// const element = <h1>Hello, word!</h1>;
 
-// root.render(
-//   <React.StrictMode>
-//     {element}
-//     {element}
-//   </React.StrictMode>,
-// );
 function timer() {
   const now = new Date();
   const timeZone = now.toString().slice(now.toString().indexOf('('));

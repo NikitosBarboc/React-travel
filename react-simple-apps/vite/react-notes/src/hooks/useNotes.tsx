@@ -16,7 +16,6 @@ export default function useNotes() {
 
   function deleteNote(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, noteId: string) {
     event.stopPropagation()
-    console.log(event);
     setNotes(oldNotes => oldNotes.filter(x => x.id !== noteId))
   }
 

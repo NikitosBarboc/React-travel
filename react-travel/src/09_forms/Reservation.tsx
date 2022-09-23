@@ -24,7 +24,6 @@ class Reservation extends React.Component<{}, reservationProps> {
     this.setState({
       [name]: value,
     });
-    console.log(this.state);
   }
 
   render() {

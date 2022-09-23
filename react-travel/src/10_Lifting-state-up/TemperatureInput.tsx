@@ -11,15 +11,11 @@ type temperatureProps = {
   // eslint-disable-next-line no-unused-vars
   onTemperatureChange: (prop: string) => void
 }
-// type temperatureState = {
-//   temperature: string,
-// }
 
 class TemperatureInput extends React.Component<temperatureProps> {
   constructor(props: temperatureProps) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    // this.state = { temperature: '' };
   }
 
   handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -29,7 +25,6 @@ class TemperatureInput extends React.Component<temperatureProps> {
 
   render() {
     const { temperature, scale } = this.props;
-    // const { scale } = this.props;
     return (
       <fieldset>
         <legend>{`Enter temperature in ${scaleNames[scale]}:`}</legend>

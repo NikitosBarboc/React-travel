@@ -12,7 +12,6 @@ class OuterClickExample extends React.Component<{}, IOuterClickExampleState> {
 
     this.state = { isOpen: false };
 
-    // this.toggleContainer = React.createRef();
     this.onBlurHandler = this.onBlurHandler.bind(this);
     this.onClickHandler = this.onClickHandler.bind(this);
     this.onFocusHandler = this.onFocusHandler.bind(this);
@@ -37,8 +36,6 @@ class OuterClickExample extends React.Component<{}, IOuterClickExampleState> {
   }
 
   render() {
-    // React assists us by bubbling the blur and
-    // focus events to the parent.
     const { isOpen } = this.state;
     return (
       <div

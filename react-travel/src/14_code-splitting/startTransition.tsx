@@ -1,9 +1,7 @@
 /* eslint-disable consistent-return */
 import React from 'react';
-// import './style.css';
 import ErrorBoundary from './ErrorBoundary';
 import PokemonDetail from './PokemonDetail';
-// LOOK FOR "START HERE" on line #62
 
 export default function App() {
   return (

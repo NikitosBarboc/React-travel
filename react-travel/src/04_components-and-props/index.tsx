@@ -5,7 +5,6 @@ import App from './app';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
-// const element = <Welcome name="Vacya" />;
 
 root.render(
   <App />,

@@ -44,7 +44,6 @@ class LoginControl extends React.Component<loginControlProps, loginControlProps>
 
   render(): React.ReactNode {
     const { isLoggedIn } = this.state;
-    // let button!: ReactElement<any>;
     return (
       <div>
         <Greeting isLoggedIn={isLoggedIn} />

@@ -14,7 +14,6 @@ class Toggle extends React.Component<{}, toggleProps> {
     this.setState((prevState) => ({
       isToggleON: !prevState.isToggleON,
     }));
-    console.log(id);
   }
 
   render(): React.ReactNode {
