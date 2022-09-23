@@ -1,58 +1,24 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Sidebar from "./components/Sidebar"
 import Editor from "./components/Editor"
 import { data } from "./data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
 import INote from "./INote"
+import useApp from "./hooks/useApp"
+import useNotes from "./hooks/useNotes"
 export default function App() {
-    const defaultNotes = 
-      JSON.parse(localStorage.getItem('notes') as string
-      ) as INote[] || [] as INote[] 
+  // const {notes, setNotes, currentNoteId, setCurrentNoteId} = useApp();
+  const {
+    createNewNote,
+    deleteNote,
+    updateNote,
+    findCurrentNote,
+    notes,
+    setCurrentNoteId,
+    currentNoteId
+  } = useNotes();
   
-    const [notes, setNotes] = React.useState(() => {
-      const defaultNotes = 
-      JSON.parse(localStorage.getItem('notes') as string
-      ) as INote[] || [] as INote[] 
-
-      return defaultNotes
-    });
-
-
-
-    const [currentNoteId, setCurrentNoteId] = React.useState(
-        () => localStorage.getItem("currentNoteId") || ""
-    )
-    useEffect(() => {
-      localStorage.setItem('notes', JSON.stringify(notes));
-    }, [notes])
-    useEffect(() => {
-      console.log(currentNoteId)
-      localStorage.setItem('currentNoteId', currentNoteId);
-      // console.log(localStorage.getItem('currentNoteId') === currentNoteId)
-    }, [currentNoteId])
-    function createNewNote() {
-        const newNote = {
-            id: nanoid(),
-            body: "# Type your markdown note's title here"
-        }
-        setNotes(prevNotes => [ ...prevNotes, newNote]);
-        setCurrentNoteId(newNote.id)
-    }
-    
-    function updateNote(text: string) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }));
-    }
-    
-    function findCurrentNote() {
-        return notes.find(note => {
-            return note.id === currentNoteId
-        }) || notes[0]
-    }
     return (
         <main>
         {
@@ -68,6 +34,7 @@ export default function App() {
                     currentNote={findCurrentNote()}
                     setCurrentNoteId={setCurrentNoteId}
                     newNote={createNewNote}
+                    deleteNote={deleteNote}
                 />
                 {
                     currentNoteId && 
